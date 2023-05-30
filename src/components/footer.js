@@ -8,7 +8,7 @@ import "../styles/Footer.css";
 const Footer = () => {
   return (
     <div className="fixed bottom-0 left-0 flex flex-col w-full h-20 text-center footer bg-corn-silk">
-      <div className="pt-2  socialMedia text-pink">
+      <div className="pt-2 socialMedia text-pink">
         <InstagramIcon />
         <TwitterIcon />
         <FacebookIcon />
