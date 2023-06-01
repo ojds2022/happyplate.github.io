@@ -17,6 +17,17 @@ module.exports = {
     backgroundSize: {
       "50%": "50%",
     },
+    borderWidth: {
+      '1': '1px',
+    },
+    screens: {
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+      '3xl': '2560px',
+    }
   },
   plugins: [],
 };

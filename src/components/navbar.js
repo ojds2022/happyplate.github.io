@@ -12,26 +12,26 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex flex-row h-20 navbar bg-corn-silk">
+    <div className="fixed top-0 flex flex-row w-full h-20 xl:h-24 2xl:h-40 navbar bg-corn-silk">
       {openLinks ? (
-        <div className="flex items-center justify-between px-6 grow">
+        <div className="flex items-center justify-between px-6 md:justify-around grow">
           <Link to="/">
-            <span className="text-xl text-hot-pink hover:text-pale-green">
+            <span className="text-lg text-hot-pink hover:text-pale-green md:text-xl lg:text-2xl xl:text-3xl 2xl:text-5xl">
               Home
             </span>
           </Link>
           <Link to="/about">
-            <span className="text-xl text-hot-pink hover:text-pale-green">
+            <span className="text-lg text-hot-pink hover:text-pale-green md:text-xl lg:text-2xl xl:text-3xl 2xl:text-5xl">
               About
             </span>
           </Link>
-          <Link to="/contact">
-            <span className="text-xl text-hot-pink hover:text-pale-green">
-              Contact
+          {/*<Link to="/">
+            <span className="text-lg text-hot-pink hover:text-pale-green md:text-xl lg:text-2xl xl:text-3xl 2xl:text-5xl">
+              Portfolio
             </span>
-          </Link>
+          </Link>*/}
           <button
-            className="bg-transparent border-0 cursor-pointer burger text-hot-pink"
+            className="bg-transparent border-0 cursor-pointer burger"
             onClick={toggleNavbar}
           >
             <ReorderIcon />
@@ -40,10 +40,10 @@ const Navbar = () => {
       ) : (
         <div className="flex items-center justify-between px-6 grow">
           <Link to="/">
-            <img id="logo" className="w-14" src={Logo} alt="logo" />
+            <img id="plateLogo" className="w-14 xl:w-20 3xl:w-32" src={Logo} alt="logo" />
           </Link>
           <button
-            className="bg-transparent border-0 cursor-pointer burger text-hot-pink"
+            className="bg-transparent border-0 cursor-pointer burger"
             onClick={toggleNavbar}
           >
             <ReorderIcon />

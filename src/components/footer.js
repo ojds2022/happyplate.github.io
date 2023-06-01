@@ -8,13 +8,13 @@ import "../styles/Footer.css";
 const Footer = () => {
   return (
     <div className="fixed bottom-0 left-0 flex flex-col w-full h-20 text-center footer bg-corn-silk">
-      <div className="pt-2 socialMedia text-pink">
+      <div id="socialMedia" className="pt-2 text-pink">
         <InstagramIcon />
         <TwitterIcon />
         <FacebookIcon />
         <LinkedInIcon />
       </div>
-      <p className="text-pink"> &copy; 2022 happyplate.com </p>
+      <p className="text-pink xl:text-xl 3xl:text-4xl"> &copy; 2023 happyplate.com </p>
     </div>
   );
 };
