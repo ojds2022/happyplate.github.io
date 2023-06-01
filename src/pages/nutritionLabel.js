@@ -55,9 +55,17 @@ const NutritonLabel = () => {
     setPotassium(data.potassium_mg);
     setShowLabel(!showLabel);
   };
-
+  
   useEffect(() => {
-    
+    const inputField = document.getElementById('inputField');
+    if (inputField) {
+      inputField.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+          event.preventDefault();
+          document.getElementById('searchButton').click();
+        }
+      });
+    }
   },[]);
 
   return (
@@ -67,8 +75,8 @@ const NutritonLabel = () => {
     >
     {showLabel === true ? (
         <>
-        <div className='w-4/6 mx-auto sm:w-1/3 lg:w-1/4 xl:w-1/3 mt-28 3xl:mt-80'>
-          <h1 className="my-1 text-4xl font-bold text-center text-white capitalize lg:text-5xl xl:text-7xl 3xl:text-9xl">
+        <div className='flex flex-col w-4/6 mx-auto sm:w-1/3 lg:w-1/4 xl:w-1/3 mt-28 3xl:mt-80'>
+          <h1 className="my-1 text-4xl font-bold text-center text-white capitalize shrink lg:text-5xl xl:text-7xl 3xl:text-9xl">
               {name}
           </h1>
           <div className="p-3 bg-white border-black border-1">
@@ -109,7 +117,7 @@ const NutritonLabel = () => {
           </div>
         </div>
         <div className="grid mb-36 3xl:mb-52">
-            <span className='z-20 place-self-center'>
+            <span className=' place-self-center'>
                 <Link to='/'>
                     <button id='searchAgain' className='w-24 h-6 mt-2 ml-1 border-0 rounded cursor-pointer xl:w-40 xl:h-10 xl:text-xl 3xl:w-72 3xl:h-20 3xl:text-4xl xl:rounded-lg 3xl:rounded-2xl' >Search again</button>
                 </Link>
@@ -125,6 +133,7 @@ const NutritonLabel = () => {
         </h2>
         <input id="inputField" className="xl:w-60 xl:h-12 xl:text-2xl 3xl:w-96 3xl:h-20 3xl:text-4xl" type="text" placeholder="Enter here..." />
         <button
+            id="searchButton"
             className="h-6 ml-1 border-0 rounded cursor-pointer w-14 xl:h-12 xl:w-32 3xl:h-20 3xl:w-44 xl:text-xl 3xl:text-3xl xl:ml-3 3xl:ml-5 3xl:rounded-xl bg-hot-pink hover:bg-pale-green"
             type="submit"
             onClick={fetchNutrition}

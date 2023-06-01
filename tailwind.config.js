@@ -12,10 +12,12 @@ module.exports = {
         "hot-pink": "#ff69b4",
         "corn-silk": "#fff8dc",
         "sky-blue": "#87ceeb",
+        "navy-blue": "#0d2949",
       },
     },
     backgroundSize: {
       "50%": "50%",
+      "30%": "30%",
     },
     borderWidth: {
       '1': '1px',
