@@ -70,13 +70,13 @@ const NutritonLabel = () => {
 
   return (
     <div
-    className="grid w-full bg-center bg-50% min-h-screen  bg-sky-blue home"
+    className="flex flex-col h-screen overflow-auto bg-center bg-50% bg-sky-blue home"
     style={{ backgroundImage: `url(${BackgroundImage})` }}
     >
     {showLabel === true ? (
         <>
-        <div className='flex flex-col w-4/6 mx-auto sm:w-1/3 lg:w-1/4 xl:w-1/3 mt-28 3xl:mt-80'>
-          <h1 className="my-1 text-4xl font-bold text-center text-white capitalize shrink lg:text-5xl xl:text-7xl 3xl:text-9xl">
+        <div className='flex-initial w-4/6 mx-auto mt-20 sm:w-1/3 lg:w-1/4 xl:w-1/3 2xl:mt-56 3xl:mt-80'>
+          <h1 className="my-1 text-3xl font-bold text-center text-white capitalize lg:text-5xl xl:text-7xl 3xl:text-9xl">
               {name}
           </h1>
           <div className="p-3 bg-white border-black border-1">
@@ -116,31 +116,31 @@ const NutritonLabel = () => {
               </p>
           </div>
         </div>
-        <div className="grid mb-36 3xl:mb-52">
-            <span className=' place-self-center'>
+        <div className="z-20 grid content-center">
+            <span className='place-self-center'>
                 <Link to='/'>
-                    <button id='searchAgain' className='w-24 h-6 mt-2 ml-1 border-0 rounded cursor-pointer xl:w-40 xl:h-10 xl:text-xl 3xl:w-72 3xl:h-20 3xl:text-4xl xl:rounded-lg 3xl:rounded-2xl' >Search again</button>
+                    <button id='searchAgain' className='w-24 h-6 mt-4 ml-1 border-0 rounded cursor-pointer xl:w-40 xl:h-10 xl:text-xl 3xl:w-72 3xl:h-20 3xl:text-4xl xl:rounded-lg 3xl:rounded-2xl' >Search again</button>
                 </Link>
             </span>
         </div>
         </>
     ) : (
-        <div className="grid">
-        <div className="w-10/12 py-5 mb-32 text-center place-self-center bg-corn-silk md:w-8/12 rounded-xl">
-        <h2 className="mx-auto mb-3 text-xl rounded xl:text-3xl 3xl:text-6xl 3xl:p-4 text-hot-pink">
-            Enter a food or beverage that you would like to know nutritional
-            facts about!
-        </h2>
-        <input id="inputField" className="xl:w-60 xl:h-12 xl:text-2xl 3xl:w-96 3xl:h-20 3xl:text-4xl" type="text" placeholder="Enter here..." />
-        <button
-            id="searchButton"
-            className="h-6 ml-1 border-0 rounded cursor-pointer w-14 xl:h-12 xl:w-32 3xl:h-20 3xl:w-44 xl:text-xl 3xl:text-3xl xl:ml-3 3xl:ml-5 3xl:rounded-xl bg-hot-pink hover:bg-pale-green"
-            type="submit"
-            onClick={fetchNutrition}
-        >
-            Search
-        </button>
-        </div>
+        <div className="grid h-full">
+          <div className="w-10/12 py-5 mb-32 text-center place-self-center bg-corn-silk md:w-8/12 rounded-xl">
+            <h2 className="mx-auto mb-3 text-xl rounded xl:text-3xl 3xl:text-6xl 3xl:p-4 text-hot-pink">
+                Enter a food or beverage that you would like to know nutritional
+                facts about!
+            </h2>
+            <input id="inputField" className="xl:w-60 xl:h-12 xl:text-2xl 3xl:w-96 3xl:h-20 3xl:text-4xl" type="text" placeholder="Enter here..." />
+            <button
+                id="searchButton"
+                className="h-6 ml-1 border-0 rounded cursor-pointer w-14 xl:h-12 xl:w-32 3xl:h-20 3xl:w-44 xl:text-xl 3xl:text-3xl xl:ml-3 3xl:ml-5 3xl:rounded-xl bg-hot-pink hover:bg-pale-green"
+                type="submit"
+                onClick={fetchNutrition}
+            >
+                Search
+            </button>
+          </div>
         </div>
     )}
     </div>
