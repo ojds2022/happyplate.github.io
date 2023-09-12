@@ -70,48 +70,48 @@ const NutritonLabel = () => {
 
   return (
     <div
-    className="flex flex-col h-screen overflow-auto bg-center bg-50% bg-sky-blue home"
+    className="flex flex-col h-screen overflow-scroll bg-center bg-50% bg-sky-blue home"
     style={{ backgroundImage: `url(${BackgroundImage})` }}
     >
     {showLabel === true ? (
         <>
-        <div className='flex-initial w-4/6 mx-auto mt-20 sm:w-1/3 lg:w-1/4 xl:w-1/3 2xl:mt-56 3xl:mt-80'>
-          <h1 className="my-1 text-3xl font-bold text-center text-white capitalize lg:text-5xl xl:text-7xl 3xl:text-9xl">
+        <div className='flex-initial w-4/6 mx-auto mt-20 sm:w-1/3 lg:w-1/3 lg:mt-24 2xl:mt-56 3xl:mt-80'>
+          <h1 className="my-1 text-3xl font-bold text-center text-white capitalize xxs:text-4xl xs:text-5xl lg:text-6xl xl:text-7xl 3xl:text-9xl">
               {name}
           </h1>
           <div className="p-3 bg-white border-black border-1">
-              <h2 className="text-2xl font-bold border-black xl:text-4xl 3xl:text-6xl border-b-1">Nutrition Facts</h2>
-              <p className="font-bold border-black xl:text-2xl 3xl:text-4xl xl:py-1 3xl:py-3 border-b-1">
+              <h2 className="text-xl font-bold border-black xxs:text-2xl xs:text-3xl 3xl:text-6xl border-b-1">Nutrition Facts</h2>
+              <p className="font-bold border-black xxs:text-base xs:text-xl 3xl:text-4xl xl:py-1 3xl:py-3 border-b-1">
               Serving Size <span>{servingSize} g</span>
               </p>
-              <p className="text-lg font-bold border-black xl:text-2xl 3xl:text-4xl xl:py-1 3xl:py-3 border-b-1">
+              <p className="font-bold border-black xxs:text-base xs:text-xl 3xl:text-4xl xl:py-1 3xl:py-3 border-b-1">
               Calories <span>{calories}</span>
               </p>
-              <p className="border-black xl:text-2xl 3xl:text-4xl xl:py-1 3xl:py-3 border-b-1">
+              <p className="text-sm border-black xxs:text-base xs:text-xl 3xl:text-4xl xl:py-1 3xl:py-3 border-b-1">
                 <span className="font-bold">Total Fat </span>{fatTotal} g
               </p>
-              <p className="border-black xl:text-2xl 3xl:text-4xl xl:py-1 3xl:py-3 border-b-1">
+              <p className="text-sm border-black xxs:text-base xs:text-xl 3xl:text-4xl xl:py-1 3xl:py-3 border-b-1">
               Saturated Fat <span>{fatSat} g</span>
               </p>
-              <p className="border-black xl:text-2xl 3xl:text-4xl xl:py-1 3xl:py-3 border-b-1">
+              <p className="text-sm border-black xxs:text-base xs:text-xl 3xl:text-4xl xl:py-1 3xl:py-3 border-b-1">
                 <span className="font-bold">Cholesterol </span>{cholesterol} mg
               </p>
-              <p className="border-black xl:text-2xl 3xl:text-4xl xl:py-1 3xl:py-3 border-b-1">
+              <p className="text-sm border-black xxs:text-base xs:text-xl 3xl:text-4xl xl:py-1 3xl:py-3 border-b-1">
                 <span className="font-bold">Sodium </span>{sodium} mg
               </p>
-              <p className="border-black xl:text-2xl 3xl:text-4xl xl:py-1 3xl:py-3 border-b-1">
+              <p className="text-sm border-black xxs:text-base xs:text-xl 3xl:text-4xl xl:py-1 3xl:py-3 border-b-1">
                 <span className="font-bold">Total Carbohydrate </span>{carbs} g
               </p>
-              <p className="border-black xl:text-2xl 3xl:text-4xl xl:py-1 3xl:py-3 border-b-1">
+              <p className="text-sm border-black xxs:text-base xs:text-xl 3xl:text-4xl xl:py-1 3xl:py-3 border-b-1">
               Dietary Fiber <span>{fiber} g</span>
               </p>
-              <p className="border-black xl:text-2xl 3xl:text-4xl xl:py-1 3xl:py-3 border-b-1">
+              <p className="text-sm border-black xxs:text-base xs:text-xl 3xl:text-4xl xl:py-1 3xl:py-3 border-b-1">
               Total Sugars <span>{sugar} g</span>
               </p>
-              <p className="border-black xl:text-2xl 3xl:text-4xl xl:py-1 3xl:py-3 border-b-1">
+              <p className="text-sm border-black xxs:text-base xs:text-xl 3xl:text-4xl xl:py-1 3xl:py-3 border-b-1">
                 <span className="font-bold">Protein </span>{protein} g
               </p>
-              <p className="border-black xl:text-2xl 3xl:text-4xl xl:py-1 3xl:py-3 border-b-1">
+              <p className="text-sm border-black xxs:text-base xs:text-xl 3xl:text-4xl xl:py-1 3xl:py-3 border-b-1">
               Potassium <span>{potassium} mg</span>
               </p>
           </div>
@@ -119,7 +119,7 @@ const NutritonLabel = () => {
         <div className="z-20 grid content-center">
             <span className='place-self-center'>
                 <Link to='/'>
-                    <button id='searchAgain' className='w-24 h-6 mt-4 ml-1 border-0 rounded cursor-pointer xl:w-40 xl:h-10 xl:text-xl 3xl:w-72 3xl:h-20 3xl:text-4xl xl:rounded-lg 3xl:rounded-2xl' >Search again</button>
+                    <button id='searchAgain' className='w-24 h-6 mt-4 ml-1 border-0 rounded cursor-pointer xxs:text-xl xxs:w-32 xxs:h-8 xl:w-40 xl:h-10 xl:text-xl 3xl:w-72 3xl:h-20 3xl:text-4xl xl:rounded-lg 3xl:rounded-2xl' >Search again</button>
                 </Link>
             </span>
         </div>
